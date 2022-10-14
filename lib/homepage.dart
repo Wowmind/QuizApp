@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
           Row(
              children:  [
                if(_scoreTracker.length == 0)
-                 SizedBox(
+                const SizedBox(
                    height: 25,
                  ),
                if (_scoreTracker.length > 0) ..._scoreTracker,
@@ -110,7 +110,7 @@ class _HomePageState extends State<HomePage> {
               child: ElevatedButton(
                 onPressed: () {
                   if(!answerWasSelected){
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Please select answer before getting to the next question')));
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Please select an answer before getting to the next question')));
                     return;
                   }
                   _nextQuestion();
